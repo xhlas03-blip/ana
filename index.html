@@ -5,18 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>For Ana 💗</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background-color: #000;
+      background: radial-gradient(circle at center, #111 0%, #000 100%);
       color: #fff;
       text-align: center;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       animation: fadeIn 2s ease-in;
     }
 
     h2 {
-      margin-top: 40px;
+      margin-top: 20px;
       font-size: 30px;
       color: #ffb6c1;
       text-shadow: 0 0 20px rgba(255, 182, 193, 0.8);
@@ -28,7 +37,7 @@
       height: auto;
       border-radius: 12px;
       margin-top: 30px;
-      box-shadow: 0 0 25px rgba(255, 182, 193, 0.4);
+      box-shadow: 0 0 30px rgba(255, 182, 193, 0.6), 0 0 10px rgba(255, 182, 193, 0.3) inset;
       animation: fadeInImage 2.5s ease-in;
     }
 
@@ -48,9 +57,10 @@
       font-style: italic;
       font-size: 15px;
       text-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
-      animation: fadeIn 3s ease-in;
+      text-align: center;
     }
 
+    /* Fade-in animations */
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -65,24 +75,44 @@
       from { text-shadow: 0 0 10px rgba(255, 182, 193, 0.4); }
       to { text-shadow: 0 0 25px rgba(255, 182, 193, 0.8); }
     }
+
+    /* Word-by-word typing effect */
+    .word {
+      opacity: 0;
+      display: inline-block;
+      animation: fadeWord 0.5s forwards;
+    }
+
+    @keyframes fadeWord {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
   <h2>For Ana 💌</h2>
-  <img src="https://i.postimg.cc/76fwtvLJ/Polish-20251105-124730753.jpgE" alt="Message for Ana">
-  <p>I'll never hate you, please be the happiest you can be, be healthy and please love yourself. I'll never forget the memories we shared. I'll always be happy for you and always pray the best for you, ily!</p>
-  <p class="extra">Deep down in my heart, there's still a space for you, feelings for you but i know where i stand and i don't stand a chance with you so i guess everything's over. By time i'll bury it or it fades, if only it will. bye!</p>
+  <img src="https://i.postimg.cc/76fwtvLJ/Polish-20251105-124730753.jpg" alt="Message for Ana">
+  
+  <p>
+    I'll never hate you, please be the happiest you can be, be healthy and please love yourself. I'll never forget the memories we shared. I'll always be happy for you and always pray the best for you, ily!
+  </p>
+
+  <p class="extra" id="message"></p>
+
   <p style="margin-top:40px; color:#777; font-size:13px;">— Sincere</p>
+
+  <script>
+    const messageEl = document.getElementById('message');
+    const text = "bye! Deep down in my heart, there's still a space for you, feelings for you but i know where i stand and i don't stand a chance with you so i guess everything's over. By time i'll bury it or it fades, if only it will.";
+    const words = text.split(" ");
+    
+    words.forEach((word, index) => {
+      const span = document.createElement('span');
+      span.className = 'word';
+      span.style.animationDelay = `${index * 0.25}s`; // delay for each word
+      span.textContent = word + " ";
+      messageEl.appendChild(span);
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
