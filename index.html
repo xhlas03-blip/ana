@@ -1,74 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Ana</title>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    background: radial-gradient(circle at top, #1a1a1a 0%, #000 80%);
-    color: #fff;
-    font-family: 'Segoe UI', sans-serif;
-    text-align: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Ana 💗</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 2s ease-in;
+    }
 
-  h2 {
-    color: #ffb6c1;
-    font-size: 28px;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-  }
+    h2 {
+      margin-top: 40px;
+      font-size: 30px;
+      color: #ffb6c1;
+      text-shadow: 0 0 20px rgba(255, 182, 193, 0.8);
+      animation: glow 3s ease-in-out infinite alternate;
+    }
 
-  img {
-    max-width: 90%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 30px rgba(255, 182, 193, 0.3);
-    opacity: 0;
-    animation: fadeIn 2s ease forwards;
-  }
+    img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 12px;
+      margin-top: 30px;
+      box-shadow: 0 0 25px rgba(255, 182, 193, 0.4);
+      animation: fadeInImage 2.5s ease-in;
+    }
 
-  .text {
-    margin-top: 40px;
-    max-width: 80%;
-    font-size: 16px;
-    color: #d8b8c4;
-    opacity: 0;
-    animation: fadeUp 3s ease forwards;
-    animation-delay: 2s;
-    line-height: 1.6;
-  }
+    p {
+      margin-top: 35px;
+      font-size: 16px;
+      color: #d8d8d8;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
 
-  p {
-    margin-top: 30px;
-    font-size: 13px;
-    color: #888;
-  }
+    .extra {
+      margin-top: 25px;
+      color: #ffb6c1;
+      font-style: italic;
+      font-size: 15px;
+      text-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
+      animation: fadeIn 3s ease-in;
+    }
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.98); }
-    to { opacity: 1; transform: scale(1); }
-  }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(25px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-</style>
+    @keyframes fadeInImage {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px rgba(255, 182, 193, 0.4); }
+      to { text-shadow: 0 0 25px rgba(255, 182, 193, 0.8); }
+    }
+  </style>
 </head>
 <body>
   <h2>For Ana 💌</h2>
-  <img src="https://i.postimg.cc/76fwtvLJ/Polish-20251105-124730753.jpg" alt="Message for Ana">
-  <div class="text">
-    deep down in my heart there's still a space for you, feelings for you but i know it and i guess everything's over.
-  </div>
-  <p>— made with sincerity by Ikhlas —</p>
+  <img src="https://i.postimg.cc/76fwtvLJ/Polish-20251105-124730753.jpgE" alt="Message for Ana">
+  <p>Thank you for loving me once — that was the happiest I've been in a long time.</p>
+  <p class="extra">deep down in my heart, there's still a space for you, feelings for you, but i know it and i guess everything's over.</p>
+  <p style="margin-top:40px; color:#777; font-size:13px;">— Ikhlas</p>
 </body>
 </html>
