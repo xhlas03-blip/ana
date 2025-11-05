@@ -1,131 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>for you</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Great+Vibes&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Ana</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, #1a1a1a 0%, #000 80%);
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: radial-gradient(circle at top, #0a0f27, #000);
-      overflow: hidden;
-      color: #fff;
-      text-align: center;
-      position: relative;
-    }
+  h2 {
+    color: #ffb6c1;
+    font-size: 28px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+  }
 
-    img {
-      width: 85%;
-      max-width: 500px;
-      border-radius: 10px;
-      box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
-      animation: glow 5s ease-in-out infinite alternate;
-    }
+  img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 182, 193, 0.3);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+  }
 
-    @keyframes glow {
-      from { box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); }
-      to { box-shadow: 0 0 40px rgba(255, 255, 255, 0.3); }
-    }
+  .text {
+    margin-top: 40px;
+    max-width: 80%;
+    font-size: 16px;
+    color: #d8b8c4;
+    opacity: 0;
+    animation: fadeUp 3s ease forwards;
+    animation-delay: 2s;
+    line-height: 1.6;
+  }
 
-    .message {
-      margin-top: 40px;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.85);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 3s ease forwards 2s;
-    }
+  p {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #888;
+  }
 
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+  }
 
-    /* Floating particles */
-    .particle {
-      position: absolute;
-      background: rgba(255, 255, 255, 0.4);
-      border-radius: 50%;
-      animation: float 12s infinite;
-      pointer-events: none;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0) scale(0.6); opacity: 0.6; }
-      50% { opacity: 1; }
-      100% { transform: translateY(-120vh) scale(1); opacity: 0; }
-    }
-
-    /* Music button */
-    .music-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.3);
-      color: white;
-      padding: 10px 16px;
-      border-radius: 50px;
-      cursor: pointer;
-      font-family: 'Playfair Display', serif;
-      backdrop-filter: blur(4px);
-      transition: 0.3s;
-    }
-
-    .music-btn:hover {
-      background: rgba(255,255,255,0.2);
-    }
-  </style>
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
 </head>
 <body>
-  <img src="https://i.postimg.cc/76fwtvLJ/Polish-20251105-124730753.jpg" alt="Message Image">
-
-  <div class="message">
+  <h2>For Ana 💌</h2>
+  <img src="https://i.postimg.cc/76fwtvLJ/Polish-20251105-124730753.jpg" alt="Message for Ana">
+  <div class="text">
     deep down in my heart there's still a space for you, feelings for you but i know it and i guess everything's over.
   </div>
-
-  <button class="music-btn" onclick="toggleMusic()">🎵</button>
-
-  <audio id="bgMusic" loop>
-    <source src="https://cdn.pixabay.com/audio/2022/07/30/audio_c26bca2c09.mp3" type="audio/mpeg">
-  </audio>
-
-  <script>
-    // Floating particles generator
-    for (let i = 0; i < 25; i++) {
-      let p = document.createElement('div');
-      p.classList.add('particle');
-      p.style.width = p.style.height = Math.random() * 4 + 2 + 'px';
-      p.style.left = Math.random() * 100 + 'vw';
-      p.style.top = Math.random() * 100 + 'vh';
-      p.style.animationDuration = (8 + Math.random() * 8) + 's';
-      p.style.animationDelay = Math.random() * 5 + 's';
-      document.body.appendChild(p);
-    }
-
-    // Music control
-    const music = document.getElementById('bgMusic');
-    let playing = false;
-    function toggleMusic() {
-      if (playing) {
-        music.pause();
-      } else {
-        music.play();
-      }
-      playing = !playing;
-    }
-  </script>
+  <p>— made with sincerity by Ikhlas —</p>
 </body>
 </html>
-
