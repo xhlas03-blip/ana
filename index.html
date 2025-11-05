@@ -57,10 +57,9 @@
       font-style: italic;
       font-size: 15px;
       text-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
-      text-align: center;
+      animation: fadeIn 3s ease-in;
     }
 
-    /* Fade-in animations */
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -75,18 +74,6 @@
       from { text-shadow: 0 0 10px rgba(255, 182, 193, 0.4); }
       to { text-shadow: 0 0 25px rgba(255, 182, 193, 0.8); }
     }
-
-    /* Word-by-word typing effect */
-    .word {
-      opacity: 0;
-      display: inline-block;
-      animation: fadeWord 0.5s forwards;
-    }
-
-    @keyframes fadeWord {
-      from { opacity: 0; transform: translateY(5px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
   </style>
 </head>
 <body>
@@ -97,22 +84,11 @@
     I'll never hate you, please be the happiest you can be, be healthy and please love yourself. I'll never forget the memories we shared. I'll always be happy for you and always pray the best for you, ily!
   </p>
 
-  <p class="extra" id="message"></p>
+  <p class="extra">
+    Deep down in my heart, there's still a space for you, feelings for you but i know where i stand and i don't stand a chance with you so i guess everything's over. By time i'll bury it or it fades, if only it will.<br>
+    bye!
+  </p>
 
   <p style="margin-top:40px; color:#777; font-size:13px;">— Sincere</p>
-
-  <script>
-    const messageEl = document.getElementById('message');
-    const text = "bye! Deep down in my heart, there's still a space for you, feelings for you but i know where i stand and i don't stand a chance with you so i guess everything's over. By time i'll bury it or it fades, if only it will.";
-    const words = text.split(" ");
-    
-    words.forEach((word, index) => {
-      const span = document.createElement('span');
-      span.className = 'word';
-      span.style.animationDelay = `${index * 0.25}s`; // delay for each word
-      span.textContent = word + " ";
-      messageEl.appendChild(span);
-    });
-  </script>
 </body>
 </html>
