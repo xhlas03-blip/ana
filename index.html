@@ -1,39 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>For Ana</title>
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    h2 {
-      margin-top: 40px;
-      font-size: 28px;
-      color: #ffb6c1;
-    }
-    img {
-      max-width: 90%;
-      height: auto;
-      border-radius: 10px;
-      margin-top: 30px;
-      box-shadow: 0 0 20px rgba(255, 182, 193, 0.4);
-    }
-    p {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #aaa;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Ana</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, #1a1a1a 0%, #000 80%);
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h2 {
+    color: #ffb6c1;
+    font-size: 28px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+  }
+
+  img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 182, 193, 0.3);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+  }
+
+  .text {
+    margin-top: 40px;
+    max-width: 80%;
+    font-size: 16px;
+    color: #d8b8c4;
+    opacity: 0;
+    animation: fadeUp 3s ease forwards;
+    animation-delay: 2s;
+    line-height: 1.6;
+  }
+
+  p {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #888;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
 </head>
 <body>
   <h2>For Ana 💌</h2>
-  <img src="https://i.postimg.cc/76fwtvLJ/Polish-20251105-124730753.jpg" alt="Message for Ana">
-  <p>Made with sincerity by Ikhlas.</p>
+  <img src="https://i.postimg.cc/76fwtvLJ/Polish-20251105-124730753.jpgE" alt="Message for Ana">
+  <div class="text">
+    deep down in my heart there's still a space for you, feelings for you but i know it and i guess everything's over.
+  </div>
+  <p>— made with sincerity by Ikhlas —</p>
 </body>
 </html>
